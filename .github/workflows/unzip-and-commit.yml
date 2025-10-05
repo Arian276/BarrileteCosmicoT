@@ -4,13 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       zip_path:
-        description: 'Ruta del ZIP en el repo (por ej. BarrileteCosmicoTV.zip)'
+        description: 'Ruta o nombre del ZIP en el repo (p.ej. BarrileteCosmicoTV.zip)'
         required: true
         default: 'BarrileteCosmicoTV.zip'
       dest_dir:
-        description: 'Carpeta destino para extraer (se creará si no existe)'
+        description: 'Carpeta destino: "." para raíz, o nombre de carpeta'
         required: true
         default: 'BarrileteCosmicoTV'
+      remove_zip:
+        description: 'Borrar el ZIP luego de extraer (yes/no)'
+        required: true
+        default: 'yes'
 
 permissions:
   contents: write  # necesario para pushear commits
@@ -25,31 +29,71 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Validar archivo ZIP existe
+      - name: Mostrar contenidos del repo (debug)
+        run: ls -la && echo "---" && find . -maxdepth 3 -type f -printf "%p\n"
+
+      - name: Resolver ruta real del ZIP
+        id: resolve_zip
         shell: bash
         run: |
-          set -e
-          if [ ! -f "${{ github.event.inputs.zip_path }}" ]; then
-            echo "No se encontró: ${{ github.event.inputs.zip_path }}"
-            ls -la
-            exit 1
+          set -euo pipefail
+          INPUT="${{ github.event.inputs.zip_path }}"
+
+          # Si existe exactamente como lo pasaron, usarlo
+          if [ -f "$INPUT" ]; then
+            echo "zip_path=$INPUT" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+
+          # Probar en raíz con solo el nombre base
+          base="$(basename "$INPUT")"
+          if [ -f "./$base" ]; then
+            echo "zip_path=./$base" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Buscar en todo el repo por nombre exacto (case sensitive)
+          found="$(find . -type f -name "$base" | head -n 1 || true)"
+          if [ -n "$found" ]; then
+            echo "zip_path=$found" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "❌ No se encontró el ZIP '$INPUT' (ni '$base') en el repo."
+          exit 1
 
       - name: Instalar unzip (por si acaso)
         run: sudo apt-get update && sudo apt-get install -y unzip
 
-      - name: Extraer ZIP en carpeta destino
+      - name: Extraer ZIP
+        id: unzip
         shell: bash
         run: |
-          mkdir -p "${{ github.event.inputs.dest_dir }}"
-          unzip -o "${{ github.event.inputs.zip_path }}" -d "${{ github.event.inputs.dest_dir }}"
-          echo "Contenido extraído en: ${{ github.event.inputs.dest_dir }}"
-          ls -la "${{ github.event.inputs.dest_dir }}"
+          set -euo pipefail
+          ZIP="${{ steps.resolve_zip.outputs.zip_path }}"
+          DEST="${{ github.event.inputs.dest_dir }}"
+
+          echo "ZIP a extraer: $ZIP"
+          echo "Destino solicitado: $DEST"
+
+          if [ "$DEST" = "." ]; then
+            # Extraer en la raíz del repo
+            unzip -o "$ZIP" -d .
+          else
+            mkdir -p "$DEST"
+            unzip -o "$ZIP" -d "$DEST"
+          fi
+
+          echo "✅ Extracción finalizada."
 
       - name: (Opcional) Borrar ZIP original
-        if: ${{ success() }}
+        if: ${{ success() && github.event.inputs.remove_zip == 'yes' }}
+        shell: bash
         run: |
-          rm -f "${{ github.event.inputs.zip_path }}"
+          set -e
+          ZIP="${{ steps.resolve_zip.outputs.zip_path }}"
+          rm -f "$ZIP" || true
+          echo "🗑️ ZIP eliminado."
 
       - name: Commit & push si hubo cambios
         shell: bash
@@ -58,9 +102,9 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A
-            git commit -m "chore: unzip '${{ github.event.inputs.zip_path }}' into '${{ github.event.inputs.dest_dir }}'"
+            git commit -m "chore: unzip '${{ github.event.inputs.zip_path }}' into '${{ github.event.inputs.dest_dir }}' (remove_zip=${{ github.event.inputs.remove_zip }})"
             git push
-            echo "Cambios pusheados ✅"
+            echo "🚀 Cambios pusheados."
           else
-            echo "No hay cambios para commitear."
+            echo "ℹ️ No hay cambios para commitear."
           fi
