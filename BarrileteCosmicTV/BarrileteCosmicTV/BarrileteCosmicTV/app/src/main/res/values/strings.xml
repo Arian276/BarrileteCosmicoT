@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BarrileteCosmico TV</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_settings">Configuración</string>
+    
+    <!-- Home Screen -->
+    <string name="home_featured">Destacados</string>
+    <string name="home_all_streams">Todos los streams</string>
+    <string name="home_loading">Cargando streams...</string>
+    <string name="home_no_streams">No hay streams disponibles</string>
+    
+    <!-- Stream Screen -->
+    <string name="stream_loading">Cargando stream...</string>
+    <string name="stream_error">Error al cargar el stream</string>
+    <string name="stream_category">Categoría: %1$s</string>
+    <string name="stream_views">%1$d visualizaciones</string>
+    
+    <!-- Video Player -->
+    <string name="video_play">Reproducir</string>
+    <string name="video_pause">Pausar</string>
+    <string name="video_stop">Detener</string>
+    <string name="video_fullscreen">Pantalla completa</string>
+    
+    <!-- Search -->
+    <string name="search_hint">Buscar streams...</string>
+    <string name="search_no_results">No se encontraron resultados</string>
+    <string name="search_results">Resultados de búsqueda</string>
+    
+    <!-- Common -->
+    <string name="back">Atrás</string>
+    <string name="loading">Cargando...</string>
+    <string name="error">Error</string>
+    <string name="retry">Reintentar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">Aceptar</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_app_logo">Logo de BarrileteCosmico TV</string>
+    <string name="cd_stream_thumbnail">Miniatura del stream</string>
+    <string name="cd_play_button">Botón de reproducir</string>
+    <string name="cd_search_button">Botón de buscar</string>
+    <string name="cd_settings_button">Botón de configuración</string>
+    <string name="cd_back_button">Botón de volver</string>
+</resources>

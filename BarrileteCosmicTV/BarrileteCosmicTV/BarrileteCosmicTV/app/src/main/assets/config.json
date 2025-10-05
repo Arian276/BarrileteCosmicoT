@@ -1,0 +1,28 @@
+{
+  "api": {
+    "baseUrl": "https://2716bde5-97ae-493d-accf-a5ea9884362a-00-qq5qbg9akr6n.picard.replit.dev/api/",
+    "timeout": 30000
+  },
+  "app": {
+    "appName": "BarrileteCosmico TV",
+    "version": "2.0-CHAT-FIXED",
+    "environment": "production"
+  },
+  "ui": {
+    "refreshInterval": 10000,
+    "autoRefreshEnabled": true,
+    "pullToRefreshEnabled": true
+  },
+  "channels": {
+    "defaultCategory": "sports",
+    "featuredThreshold": 1000,
+    "gridColumns": 2,
+    "animationDelay": 50
+  },
+  "backend": {
+    "primary": "https://2716bde5-97ae-493d-accf-a5ea9884362a-00-qq5qbg9akr6n.picard.replit.dev",
+    "fallback": [],
+    "fcmEnabled": true,
+    "realTimeCounters": true
+  }
+}
