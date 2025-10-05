@@ -1,0 +1,66 @@
+name: Unzip repo ZIP and commit
+
+on:
+  workflow_dispatch:
+    inputs:
+      zip_path:
+        description: 'Ruta del ZIP en el repo (por ej. BarrileteCosmicoTV.zip)'
+        required: true
+        default: 'BarrileteCosmicoTV.zip'
+      dest_dir:
+        description: 'Carpeta destino para extraer (se creará si no existe)'
+        required: true
+        default: 'BarrileteCosmicoTV'
+
+permissions:
+  contents: write  # necesario para pushear commits
+
+jobs:
+  unzip_and_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validar archivo ZIP existe
+        shell: bash
+        run: |
+          set -e
+          if [ ! -f "${{ github.event.inputs.zip_path }}" ]; then
+            echo "No se encontró: ${{ github.event.inputs.zip_path }}"
+            ls -la
+            exit 1
+          fi
+
+      - name: Instalar unzip (por si acaso)
+        run: sudo apt-get update && sudo apt-get install -y unzip
+
+      - name: Extraer ZIP en carpeta destino
+        shell: bash
+        run: |
+          mkdir -p "${{ github.event.inputs.dest_dir }}"
+          unzip -o "${{ github.event.inputs.zip_path }}" -d "${{ github.event.inputs.dest_dir }}"
+          echo "Contenido extraído en: ${{ github.event.inputs.dest_dir }}"
+          ls -la "${{ github.event.inputs.dest_dir }}"
+
+      - name: (Opcional) Borrar ZIP original
+        if: ${{ success() }}
+        run: |
+          rm -f "${{ github.event.inputs.zip_path }}"
+
+      - name: Commit & push si hubo cambios
+        shell: bash
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: unzip '${{ github.event.inputs.zip_path }}' into '${{ github.event.inputs.dest_dir }}'"
+            git push
+            echo "Cambios pusheados ✅"
+          else
+            echo "No hay cambios para commitear."
+          fi
