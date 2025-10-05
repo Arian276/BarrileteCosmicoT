@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       zip_path:
-        description: 'Ruta o nombre del ZIP en el repo (p.ej. BarrileteCosmicoTV.zip)'
+        description: 'Ruta o nombre del ZIP en el repo (p.ej. BarrileteCosmicTV.zip)'
         required: true
-        default: 'BarrileteCosmicoTV.zip'
+        default: 'BarrileteCosmicTV.zip'
       dest_dir:
         description: 'Carpeta destino: "." para raíz, o nombre de carpeta'
         required: true
-        default: 'BarrileteCosmicoTV'
+        default: 'BarrileteCosmicTV'
       remove_zip:
         description: 'Borrar el ZIP luego de extraer (yes/no)'
         required: true
