@@ -1,0 +1,33 @@
+// settings.gradle (Project)
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        // Opcional: si tenés plugins publicados localmente
+        // mavenLocal()
+    }
+}
+
+dependencyResolutionManagement {
+    // Más tolerante: evita fallos si algún módulo declara repos propios
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // Opcional: si tenés artefactos locales
+        // mavenLocal()
+        maven { url 'https://jitpack.io' } // solo si realmente usás JitPack
+        maven {
+            name = "VideoLAN"
+            url = "https://download.videolan.org/pub/videolan/vlc/android/"
+        }
+    }
+}
+
+// Nota: los espacios en el nombre del proyecto pueden generar rarezas en algunos scripts.
+// Si todo te funciona, podés dejarlo; si ves issues, cambialo a "BarrileteCosmicoTV".
+rootProject.name = "BarrileteCosmico TV"
+
+include ':app'

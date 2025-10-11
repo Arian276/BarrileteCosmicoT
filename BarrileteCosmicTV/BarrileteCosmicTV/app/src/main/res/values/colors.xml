@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- BarrileteCosmico TV Colors - Tema Argentino -->
+    <color name="cosmic_primary">#FF36B5D8</color>
+    <color name="cosmic_primary_variant">#FF2A91AA</color>
+    <color name="cosmic_secondary">#FFF77A2B</color>
+    <color name="cosmic_secondary_variant">#FFD4621A</color>
+    <color name="cosmic_background">#FF0C1218</color>
+    <color name="cosmic_surface">#FF1A242E</color>
+    <color name="cosmic_on_primary">#FFFFFFFF</color>
+    <color name="cosmic_on_secondary">#FFFFFFFF</color>
+    <color name="cosmic_on_background">#FFF5F5F5</color>
+    <color name="cosmic_on_surface">#FFE8E8E8</color>
+    
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#FF4ECDC4</color>
+    <color name="gradient_mid">#FF44A08D</color>
+    <color name="gradient_end">#FF4ECDC4</color>
+    
+    <color name="gradient_hover_start">#FFFF6B6B</color>
+    <color name="gradient_hover_mid">#FFFF8E53</color>
+    <color name="gradient_hover_end">#FFFF6B6B</color>
+</resources>
