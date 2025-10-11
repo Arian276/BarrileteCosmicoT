@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "username": "pedro",
+      "passwordHash": "$2b$10$WG4XJZPrJQIwzJbhltgtMu5WR7Cke/4lHe4gkW31f4LgJSzvjNSim",
+      "name": "Pedro",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "ramonburgos",
+      "passwordHash": "$2b$10$kX.lbxgbXBxDH8hGKwH7TeH5.MnQ1nyk9ui8p.Vs6pS8k/PecjsVi",
+      "name": "Ramon Primo",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "demian97",
+      "passwordHash": "$2b$10$p.s97xSc5jqH4woDJlJGYOfksjqLWOOHcEPqpp4N/tKaoBJQO0pze",
+      "name": "demian",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Rissog23",
+      "passwordHash": "$2b$10$rEPsw6I1yTlDV28Y4KBUjOFyPWGKTPPDaz0Cu.v54xqg6/cx8OxR2",
+      "name": "Rissooctubre",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "jmmontagna",
+      "passwordHash": "$2b$10$6mlqti5MQr4CkpW7fo.pB.tescH77gLDDReaHhSLeQkWYpNK9EL1i",
+      "name": "Juan manuel",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "hsant02",
+      "passwordHash": "$2b$10$qrddruIySQL.UIeax5pY/uswg4mtZipXbkkQF1txS1A12HFI19Nge",
+      "name": "Santi",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Diegote76",
+      "passwordHash": "$2b$10$F1J9Fc6R6NlzY.zj2sHyPeTzsbJG3J45nIOxo.LhMwVTxYNXc7IeS",
+      "name": "Diego",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "PresoRP",
+      "passwordHash": "$2b$10$.buSNlvLPZTzf2xN8wxgvevHatGzNPVu64a4jxd2OlHlZ9x3DADbW",
+      "name": "Joaquin",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "brianojeda",
+      "passwordHash": "$2b$10$So3SVmOUne8ATFsKCUhgf.WNDxaEnLLPZi64jGRaK/um0WLW1q8Fa",
+      "name": "brian",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Mariano",
+      "passwordHash": "$2b$10$39/urSz9m2qkwgH8IPZGWu0TwkbD74mOVqhaZG9IIUZaxiISVOWEi",
+      "name": "Marianousuario8",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Mariano26",
+      "passwordHash": "$2b$10$2OmTPodDIaScgxjq6UGQrOuveXbYFS/k5m4Mxh1.2FOY6ntgdsYZa",
+      "name": "Marianousuario8",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "hellboynico",
+      "passwordHash": "$2b$10$LlbDtD7wSQ8MED7i2cgxRemFnO8G6ivv2KS7wJiU8zjkfH72IiDk.",
+      "name": "nico",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "mateocabj_",
+      "passwordHash": "$2b$10$n.ILH9Dg.6TanP7AtwaL2OSe8Ol71zK0INdwg6GPJiAHPt/vYRAb6",
+      "name": "Mateo",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Leyto18",
+      "passwordHash": "$2b$10$z.tOMw0h5JcLV13fbpsq9uKlI1RVN5AlGMVmtMF.z8/NeYywjk7UO",
+      "name": "Leyto",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Futbol",
+      "passwordHash": "$2b$10$tROefSb7HqEeftvFtu7li.9W255SRPNtRrX.5ECYxV2fZoGNDjYPG",
+      "name": "Héctor",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Patata1995",
+      "passwordHash": "$2b$10$nQz/XKwYPR.HAlTXh169memYvirrdttaXT8oJ2Apf740HFFPKpgNW",
+      "name": "Emanuel",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Leyto",
+      "passwordHash": "$2b$10$oxcvkOM2zf63GWm4TDvQ1O2EmCfelfDdMic1HHLqv0TVgjFAbs9ua",
+      "name": "Leo",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "arian",
+      "passwordHash": "$2b$10$lpZR6q3vh1qGqBzcX5prkukYQsX7et00kNnOZGC6YCyN1yPctGeIi",
+      "name": "yo",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-10-12T00:00:00.000Z"
+    },
+    {
+      "username": "jaquen1",
+      "passwordHash": "$2b$10$plEdSKg/S3gq7ktxDLBGfutO/OeMyMQ.ZHLqHf9aqePSfw4Yf5ezW",
+      "name": "Jaquen",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "BalmoCai",
+      "passwordHash": "$2b$10$YX/W9oTG1hi8sLtNflgyYeXPwto2jO29pLgFQB39xcwVpnnBwIT0y",
+      "name": "prueba",
+      "activeSessions": 0
+    },
+    {
+      "username": "srbarrilete",
+      "passwordHash": "$2b$10$NEIj9K348s.RvyZ/jOBFaug40O5OW8taNutPP7GIp5QWCCt.PFtmy",
+      "name": "Barrilete Reddit",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    },
+    {
+      "username": "Prueba",
+      "passwordHash": "$2b$10$FBYeNvwalmr38PY9bIW58eqKEy3s90qGvzt.4ykWiZZnfhqkbQefW",
+      "name": "prueba",
+      "activeSessions": 1
+    },
+    {
+      "username": "Leandro96",
+      "passwordHash": "$2b$10$XshZNuup997xfDZc6wY3t./iFTKgSQB2txv2/p8t1cLmOtXXqClle",
+      "name": "Leandro",
+      "activeSessions": 0,
+      "registeredAt": "2025-10-09T00:00:00.000Z",
+      "expiresAt": "2025-11-08T00:00:00.000Z"
+    }
+  ]
+}
